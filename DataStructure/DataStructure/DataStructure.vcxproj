@@ -154,7 +154,9 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Queue.h" />
     <ClInclude Include="SingleLinkedList.h" />
+    <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructure.cpp" />
