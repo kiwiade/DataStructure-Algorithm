@@ -4,6 +4,8 @@
 #include "DoubleLinkedList.h"
 #include "Stack.h"
 #include "Queue.h"
+#include "ArrayStack.h"
+#include "ArrayQueue.h"
 
 int main()
 {
@@ -68,4 +70,48 @@ int main()
 
 	cout << "Pop : " << newQueue.Pop() << endl;
 	newQueue.Print();
+
+
+	// 배열로 구현한 스택
+	cout << endl;
+	cout << "Stack Implemented Using Array\n";
+	ArrayStack<int> newArrayStack;
+	newArrayStack.Print();
+
+	newArrayStack.Push(55);
+	newArrayStack.Push(44);
+	newArrayStack.Push(22);
+	newArrayStack.Push(1254);
+	newArrayStack.Push(77);
+	newArrayStack.Print();
+
+	cout << "Pop : " << newArrayStack.Pop() << endl;
+	newArrayStack.Print();
+
+
+	// 배열로 구현한 큐
+	cout << endl;
+	cout << "Queue Implemented Using Array\n";
+	ArrayQueue<int> newArrayQueue;
+	newArrayQueue.Print();
+
+	for (int i = 1; i <= 20; i++)
+	{
+		newArrayQueue.Enqueue(i);
+	}
+	newArrayQueue.Print();
+
+	cout << "Pop : " << newArrayQueue.Dequeue() << endl;
+	newArrayQueue.Print();
+	cout << "Pop : " << newArrayQueue.Dequeue() << endl;
+	newArrayQueue.Print();
+
+	newArrayQueue.Enqueue(21);
+	newArrayQueue.Enqueue(22);
+	newArrayQueue.Print();
+	newArrayQueue.Enqueue(23);
+	newArrayQueue.Enqueue(24);
+	newArrayQueue.Print();
+	newArrayQueue.Dequeue();
+	newArrayQueue.Print();
 }
