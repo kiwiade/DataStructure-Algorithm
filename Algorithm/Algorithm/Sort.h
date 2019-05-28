@@ -155,3 +155,65 @@ void QuickSort(int* datas, int start, int end)
 	QuickSort(datas, start, right - 1);
 	QuickSort(datas, right + 1, end);
 }
+
+// MergeSort에서 분할 이후에 합치는 함수
+void Merge(int* datas, int start, int middle, int end)
+{
+	int leftIndex = start;
+	int rightIndex = middle + 1;
+	int resultIndex = 0;
+
+	int length = end - start + 1;
+	int* tempArray = new int[length];
+
+	while (leftIndex <= middle && rightIndex <= end)
+	{
+		if (datas[leftIndex] > datas[rightIndex])
+		{
+			tempArray[resultIndex] = datas[rightIndex];
+			rightIndex++;
+		}
+		else
+		{
+			tempArray[resultIndex] = datas[leftIndex];
+			leftIndex++;
+		}
+		resultIndex++;
+	}
+
+	if (leftIndex <= middle)
+	{
+		for (int i = leftIndex; i <= middle; i++)
+		{
+			tempArray[resultIndex] = datas[leftIndex];
+			leftIndex++;
+			resultIndex++;
+		}
+	}
+	else
+	{
+		for (int i = rightIndex; i <= end; i++)
+		{
+			tempArray[resultIndex] = datas[rightIndex];
+			rightIndex++;
+			resultIndex++;
+		}
+	}
+
+	for (int i = 0; i < length; i++)
+	{
+		datas[start + i] = tempArray[i];
+	}
+	delete tempArray;
+}
+
+void MergeSort(int* datas, int start, int end)
+{
+	if (end - start < 1)
+		return;
+
+	int middle = (start + end) / 2;
+	MergeSort(datas, start, middle);
+	MergeSort(datas, middle + 1, end);
+	Merge(datas, start, middle, end);
+}
