@@ -6,6 +6,7 @@
 #include "Queue.h"
 #include "ArrayStack.h"
 #include "ArrayQueue.h"
+#include "BinaryTree.h"
 
 int main()
 {
@@ -114,4 +115,17 @@ int main()
 	newArrayQueue.Print();
 	newArrayQueue.Dequeue();
 	newArrayQueue.Print();
+
+	// 이진트리
+	cout << endl;
+	cout << "Binary Tree\n";
+	BinaryTree<int> newBinaryTree;
+	newBinaryTree.Print();
+
+	newBinaryTree.Add(34);
+	newBinaryTree.Add(70);
+	newBinaryTree.Add(234);
+	newBinaryTree.Add(6);
+	newBinaryTree.Add(23);
+	newBinaryTree.Print();
 }

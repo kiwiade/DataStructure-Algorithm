@@ -153,12 +153,14 @@
   <ItemGroup>
     <ClInclude Include="ArrayQueue.h" />
     <ClInclude Include="ArrayStack.h" />
+    <ClInclude Include="BNode.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="SingleLinkedList.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="BinaryTree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructure.cpp" />
