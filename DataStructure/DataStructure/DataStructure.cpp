@@ -127,5 +127,8 @@ int main()
 	newBinaryTree.Add(234);
 	newBinaryTree.Add(6);
 	newBinaryTree.Add(23);
+	newBinaryTree.Add(4);
+	newBinaryTree.Print();
+	newBinaryTree.Remove(34);
 	newBinaryTree.Print();
 }
